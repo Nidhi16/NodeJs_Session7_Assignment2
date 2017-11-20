@@ -19,6 +19,7 @@ function checkOddEven(request,response) {
 }
 
 // Configure our HTTP server to respond to all requests.
-//Listen on port 8000, IP defaults to 127.0.0.1
+var server = http.createServer(checkOddEven);  // passing callback function checkOddEven
 
-var server = http.createServer(checkOddEven).listen(8000);
+//Listen on port 8000, IP defaults to 127.0.0.1
+server.listen(8000);
